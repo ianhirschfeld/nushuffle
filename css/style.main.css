@@ -1,0 +1,919 @@
+/* ============================== FONTS ============================== */
+@font-face{
+	font-family:'Junction';
+	src:url('http://northeasternshuffle.com/css/junction/Junction-webfont.eot');
+	src:local('☺'), url('http://northeasternshuffle.com/css/junction/Junction-webfont.woff') format('woff'), url('http://northeasternshuffle.com/css/junction/Junction-webfont.ttf') format('truetype'), url('http://northeasternshuffle.com/css/junction/Junction-webfont.svg#webfontATSw5sgI') format('svg');
+	font-weight:normal;
+	font-style:normal;
+	}
+@font-face{
+	font-family:'PermanentMarker';
+	src:url('http://northeasternshuffle.com/css/permanent-marker/PermanentMarker-webfont.eot');
+	src:local('☺'), url('http://northeasternshuffle.com/css/permanent-marker/PermanentMarker-webfont.woff') format('woff'), url('http://northeasternshuffle.com/css/permanent-marker/PermanentMarker-webfont.ttf') format('truetype'), url('http://northeasternshuffle.com/css/permanent-marker/PermanentMarker-webfont.svg#webfontgsbU6X9t') format('svg');
+	font-weight:normal;
+	font-style:normal;
+	}
+	
+/* ============================== REWRITE ============================== */
+body{
+	background:#fff url(http://northeasternshuffle.com/images/bg.jpg) repeat-x;
+	font-family:Helvetica, Arial, sans-serif;
+	font-size:13px;
+	line-height:1.2;
+	}
+a{
+	color:#1579af;
+	text-decoration:none;
+	}
+	a:hover,
+	a:focus{
+		color:#000;
+		text-decoration:underline;
+		}
+h1{
+	width:272px;
+	height:30px;
+	float:left;
+	background:url('http://northeasternshuffle.com/images/logo.png') no-repeat 0 0;
+	color:#c80000;
+	text-indent:-9999px;
+	}
+h2,
+h4{
+	margin-bottom:24px;
+	color:#666;
+	font-family:Junction,Helvetica,Arial,sans-serif;
+	font-size:18px;
+	letter-spacing:-1px;
+	}
+h3{
+	font-family:Junction,Helvetica,Arial,sans-serif;
+	font-size:24px;
+	letter-spacing:-1px;
+	}
+sup{
+	font-size:8px;
+	}
+input,
+textarea{
+	padding:6px 10px 3px 10px;
+	background:#fff;
+	border:1px solid #aaa;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px;
+	color:#999;
+	font-family:Helvetica, Arial, sans-serif;
+	font-size:14px;
+	font-style:italic;
+	outline:none;
+	}
+	input.selected,
+	textarea.selected{
+		color:#000;
+		font-style:normal;
+		}
+	input.submit{
+		padding:4px 12px;
+		background:#aaa;
+		border:none;
+		color:#fff;
+		font-weight:bold;
+		font-style:normal;
+		cursor:pointer;
+		}
+		input.submit:hover,
+		input.submit:focus{
+			background:#00aceb;
+			}
+	
+/* ============================== HELPERS ============================== */
+.clear{
+	clear:both;
+	}
+.hide{
+	display:none;
+	}
+.userLink{
+	color:#3b5998;
+	}
+.tooltip {
+	display:none;
+	background:transparent url('http://northeasternshuffle.com/images/black_arrow.png');
+	font-size:14px;
+	text-align:center;
+	height:53px;
+	width:143px;
+	padding:23px 20px 0 20px;
+	color:#fff;
+	}
+	.twolines{
+		padding-top:14px;
+		height:62px;
+		}
+
+/* ============================== GLOBAL ============================== */
+#globalWrapper{
+	width:960px;
+	margin:0 auto;
+	}
+#logo{
+	width:272px;
+	height:30px;
+	display:block;
+	}
+/* ---------- Header ---------- */
+#globalHeader{
+	height:30px;
+	margin:20px 0;
+	padding-bottom:25px;
+	border-bottom:0px solid #eee;
+	}
+#globalHeaderNav{
+	padding-top:2px;
+	float:right;
+	}
+#formSearch{
+	padding-right:20px;
+	float:left;
+	}
+	#searchDept{
+		width:200px;
+		padding:4px 10px;
+		}
+	#submitSearch{
+		padding:4px;
+		background:none;
+		color:#00aceb;
+		}
+		#submitSearch:hover,
+		#submitSearch:focus{
+			background:#00aceb;
+			color:#fff;
+			}
+#globalHeaderNav .signup{
+	margin-right:6px;
+	float:left;
+	line-height:26px;
+	}
+	#globalHeaderNav .signup a{
+		font-weight:bold;
+		}
+#fbButton{
+	float:left;
+	}
+	.fb_button{
+		text-decoration:none;
+		}
+/* ---------- Footer ---------- */
+#globalFooter{
+	margin:40px 0;
+	padding-top:20px;
+	border-top:1px solid #eee;
+	color:#999;
+	overflow:hidden;
+	}
+#copyright{
+	float:left;
+	}
+#globalSocial{
+	float:right;
+	}
+#globalSocial li{
+	margin-left:10px;
+	float:left;
+	}
+#globalSocial .fb_iframe_widget span{
+	margin-top:-2px;
+	display:block;
+	}
+/* ---------- Announcement ---------- */
+.announcement{
+	margin-bottom:20px;
+	padding:10px;
+	position:relative;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+	text-align:center;
+	}
+	.announcement a{
+		text-decoration:underline;
+		}
+		.announcement a.close{
+			width:35px;
+			height:35px;
+			margin-top:-18px;
+			display:block;
+			position:absolute;
+			right:10px;
+			top:50%;
+			background:url('http://northeasternshuffle.com/images/announcementClose.png') no-repeat 0 0;
+			text-indent:-9999px;
+			}
+	.announcement .left{
+		float:left;
+		}
+	.announcement .right{
+		float:right;
+		}
+		.announcement .points{
+			margin:6px 0 0 10px;
+			position:absolute;
+			top:3px;
+			left:3px;
+			font-family:PermanentMarker,Helvetica,Arial,sans-serif;
+			font-size:14px;
+			}
+	.announcement.note{
+		border:1px solid #d2a800;
+		background:#fffcda;
+		color:#ae8b00;
+		}
+		.announcement.note a{
+			color:#8b6f00;
+			}
+	.announcement.success{
+		border:1px solid #b0d300;
+		background:#f9ffdb;
+		color:#85a000;
+		}
+		.announcement.success a{
+			color:#637700;
+			}
+	.announcement.fail{
+		border:1px solid #e21f00;
+		background:#ffe5d9;
+		color:#e11f00;
+		}
+		.announcement.fail a{
+			color:#921400;
+			}
+	.announcement.badgewin{
+		border:1px solid #00aceb;
+		background:#dcf6ff;
+		color:#0081b0;
+		overflow:hidden;
+		}
+		.announcement.badgewin a{
+			color:#006185;
+			}
+		.announcement.badgewin h5{
+			margin:4px 0;
+			color:#006185;
+			font-family:Junction,Helvetica,Arial,sans-serif;
+			font-size:13px;
+			font-weight:normal;
+			letter-spacing:-1px;
+			}
+/* ---------- Form Autocomplete ---------- */
+.autocomplete-w1{
+	width:312px;
+	}
+.autocomplete{
+	width:100%!important;
+	max-height:none!important;
+	
+	padding:4px;
+	background:#fbfbfb;
+	-moz-box-shadow: 0px 5px 5px #999;
+	-webkit-box-shadow: 0px 5px 5px #999;
+	box-shadow: 0px 5px 5px #999;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	}
+.autocomplete div{
+	width:292px;
+	margin-bottom:5px;
+	padding:4px 10px;
+	}
+.autocomplete .selected{
+	background:#00aceb;
+	color:#fff;
+	cursor:pointer;
+	}
+
+/* ============================== CONTENT ============================== */
+.col{
+	float:left;
+	}
+	.col.left{
+		width:210px;
+		}
+	.col.right{
+		width:218px;
+		}
+	.col.center{
+		width:452px;
+		margin:0 40px;
+		}
+.section{
+	margin-bottom:20px;
+	padding:15px;
+	background:#fbfbfb;
+	border:1px solid #dbdbdb;
+	-moz-border-radius:7px;
+	-webkit-border-radius:7px;
+	border-radius:7px;
+	}
+.userBadges{
+	overflow:hidden;
+	}
+	.userBadges li{
+		padding:6px;
+		float:left;
+		}
+	#profileAchievements .userBadges li{
+		padding:6px 10px;
+		}
+.star{
+	width:16px;
+	height:16px;
+	margin-right:1px;
+	float:left;
+	background-image:url('http://northeasternshuffle.com/images/stars.png');
+	background-repeat:no-repeat;
+	}
+	.star.full{
+		background-position:-32px 0;
+		}
+	.star.half{
+		background-position:-16px 0;
+		}
+	.star.empty{
+		background-position:0 0;
+		}
+	.star.selected{
+		background-position:-32px 0!important;
+		}
+.starSmall{
+	width:12px;
+	height:12px;
+	margin-right:1px;
+	float:left;
+	background-image:url('http://northeasternshuffle.com/images/stars_small.png');
+	background-repeat:no-repeat;
+	}
+	.starSmall.full{
+		background-position:-24px 0;
+		}
+	.starSmall.half{
+		background-position:-12px 0;
+		}
+	.starSmall.empty{
+		background-position:0 0;
+		}
+		
+/* ============================== LEFT COLUMN ============================== */
+/* ---------- Report Card ---------- */
+#reportCard{
+	font-size:16px;
+	}
+/*#reportCard h4{
+	padding:10px 0 6px;
+	background:#bbb;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	color:#fff;
+	text-align:center;
+	}*/
+#reportCardGrades{
+	margin-bottom:40px;
+	}
+#reportCardGrades li{
+	margin-bottom:20px;
+	overflow:hidden;
+	}
+#reportCardGrades span{
+	width:18px;
+	margin-right:15px;
+	display:block;
+	float:left;
+	color:#00aceb;
+	font-family:'PermanentMarker',Helvetica,Arial,sans-serif;
+	font-size:20px;
+	line-height:0.8;
+	}
+#reportCardGrades a{
+	width:140px;
+	display:block;
+	float:left;
+	}
+	
+/* ============================== RIGHT COLUMN ============================== */
+/* ---------- Score / Level ---------- */
+#userScore{
+	margin-bottom:30px;
+	overflow:hidden;
+	font-weight:bold;
+	}
+#userLevel{
+	width:32px;
+	float:left;
+	text-align:center;
+	}
+	#userLevel h5{
+		margin-bottom:1px;
+		color:#666;
+		font-size:11px;
+		}
+	#userLevel div{
+		width:32px;
+		height:32px;
+		background:#b0d300;
+		-moz-border-radius:18px;
+		-webkit-border-radius:18px;
+		border-radius:18px;
+		color:#fff;
+		font-size:18px;
+		line-height:32px;
+		}
+#userLevelProgress{
+	width:176px;
+	height:20px;
+	margin-top:18px;
+	position:relative;
+	float:right;
+	background:#b6d8e3;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	border-radius:4px;
+	color:#fff;
+	}
+#userProgressFill{
+	height:100%;
+	position:absolute;
+	top:0;
+	left:0;
+	background:#00aceb;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	border-radius:4px;
+	}
+#userProgressPercent{
+	position:absolute;
+	left:3px;
+	line-height:20px;
+	}
+/* ---------- User Info ---------- */
+#userInfo{
+	margin-top:20px;
+	overflow:hidden;
+	}
+#userPhoto{
+	margin-right:10px;
+	float:left;
+	border:1px solid #dbdbdb;
+	}
+#userStats{
+	margin-left:60px;
+	}
+#userName{
+	font-weight:bold;
+	}
+#userPoints{
+	color:#00aceb;
+	font-size:16px;
+	margin-top:5px;
+	}
+#userRank{
+	margin-top:6px;
+	font-size:11px;
+	color:#666;
+	}
+#userEditSettings{
+	margin-top:10px;
+	font-size:11px;
+	}
+#userViewProfile{
+	font-size:11px;
+	}
+#userIsAnonymous{
+	margin-top:6px;
+	font-size:10px;
+	font-style:italic;
+	color:#666;
+	}
+/* ---------- Achievements ---------- */
+#userAchievements{}
+/* ---------- Redeem ---------- */
+#redeem{}
+#redeemPrizes li{
+	font-size:14px;
+	margin-bottom:10px;
+	}
+#redeemPrizes .sm{
+	font-size:12px;
+	}
+	
+/* ============================== CENTER COLUMN ============================== */
+/* ---------- Shuffle Categories ---------- */
+#shuffleWrapper{
+	margin-bottom:20px;
+	}
+#shuffleTabs{
+	float:left;
+	}
+	#shuffleTabs li{
+		float:left;
+		}
+	#shuffleTabs img{margin-right:5px;display:block;float:left;}
+	#shuffleTabs a{
+		padding:11px 15px;
+		display:block;
+		color:#666;
+		text-decoration:underline;
+		}
+		#shuffleTabs a.current{
+			padding:10px 14px;
+			background:#fbfbfb;
+			border:1px solid #dbdbdb;
+			border-bottom:none;
+			-moz-border-radius:7px 7px 0 0;
+			-webkit-border-radius:7px 7px 0 0;
+			border-radius:7px 7px 0 0;
+			color:#333;
+			text-decoration:none;
+			}
+#shufflePanes{
+	margin-top:-1px;
+	padding:15px;
+	background:#fbfbfb;
+	border:1px solid #dbdbdb;
+	-moz-border-radius:0 7px 7px 7px;
+	-webkit-border-radius:0 7px 7px 7px;
+	border-radius:0 7px 7px 7px;
+	}
+	#shufflePanes .pane{
+		padding:15px;
+		display:none;
+		
+		}
+		#shufflePanes .pane.first{
+			display:block;
+			
+			}
+	#shufflePanes .icon{
+		margin-bottom:20px;
+		}
+#shuffleSelections{
+	overflow:hidden;
+	}
+	#shuffleSelections li{
+		margin:0 12px;
+		float:left;
+		text-align:center;
+		}
+	#shuffleSelections img{
+		margin-bottom:4px;
+		}
+	#shuffleSelections a{
+		text-decoration:none;
+		}
+/* ---------- Shuffle Ratings ---------- */
+#shuffleRating{
+	margin:20px 0;
+	overflow:hidden;
+	}
+	#shuffleRating span{
+		margin-right:5px;
+		float:left;
+		line-height:16px;
+		}
+	#shuffleRating .star{
+		cursor:pointer;
+		}
+/* ---------- Forms ---------- */
+.formWrapper{
+	position:relative;
+	}
+	#shuffle{
+		display:none;
+		}
+.sub{
+	color:#666;
+	margin:10px 0 5px
+	font-size:11px;
+	font-style:italic;
+	}
+.formWrapper .cancel{
+	padding-top:1px;
+	position:absolute;
+	top:0;
+	right:0;
+	background:url('http://northeasternshuffle.com/images/x.png') no-repeat 0 0;
+	color:#666;
+	text-indent:17px;
+	}
+.formWrapper img{
+	margin-right:10px;
+	float:left;
+	}
+.formWrapper h3{
+	padding-top:12px;
+	float:left;
+	font-size:22px;
+	}
+.formWrapper p{
+	margin-top:10px;
+	}
+.formWrapper p .social{
+	float:right;
+	margin:2px 65px 0 0;
+	}
+.formWrapper p .social img{
+	float:none;
+	margin:0 0 0 5px;
+	vertical-align:text-bottom;
+	}
+.formWrapper p img.add{
+	margin-right:10px;
+	padding-top:8px;
+	float:right;
+	}
+.formWrapper input.text{
+	width:300px;
+	margin-top:5px;
+	}
+	.formWrapper input.short{
+		width:137px;
+		}
+.formWrapper textarea{
+	width:300px;
+	height:100px;
+	vertical-align:bottom;
+	}
+/* ---------- Recent Activity ---------- */
+#recentActivity{
+	position:relative;
+	}
+#posts li{
+	padding:25px 0;
+	border-bottom:1px solid #dedede;
+	overflow:hidden;
+	}
+.postPhoto{
+	margin-right:10px;
+	border:1px solid #dbdbdb;
+	float:left;
+	}
+.postReply{
+	margin-right:10px;
+	float:right;
+	font-size:11px;
+	font-style:normal;
+	}
+.postInfo,
+.replyInfo{
+	padding-left:62px;
+	}
+.postComment,
+.replyComment{
+	margin:15px 0 25px 0;
+	}
+.postFooter,
+.replyFooter{
+	font-size:11px;
+	font-style:italic;
+	overflow:hidden;
+	color:#666;
+	}
+.postTimePassed,
+.replyTimePassed{
+	margin:0 6px;
+	float:left;
+	line-height:12px;
+	}
+	.replyTimePassed{
+		margin:0;
+		}
+.formReply{
+	padding-left:62px;
+	}
+#replies{
+	margin-left:25px;
+	
+	}
+#replies li{
+	margin:10px 0;
+	background:#eee;
+	padding:10px;
+	margin-bottom:8px;
+	}
+#replies .verified{
+	padding-right:5px;
+	color:#00aceb;
+	background:#f6fcfd;
+	border:1px solid #79dbff;
+	}
+	#replies .verified .postPhoto{
+		border:#f6fcfd;
+		}
+#viewMorePosts{
+	margin-top:15px;
+	text-align:center;
+	height:16px;
+	}
+/* ---------- Info Section ---------- */
+#infoSection{
+	margin-bottom:30px;
+	padding:10px;
+	border-bottom: 1px solid #ddd;
+	color:#666;
+	overflow:hidden;
+	}
+#infoSection h3{
+	margin:10px 0 20px;
+	}
+#infoSection h5{
+	margin:0 0 20px 20px;
+	padding:5px 9px 7px 10px;
+	float:right;
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	border-radius:10px;
+	color:#fff;
+	font-family:PermanentMarker,Helvetica,Arial,sans-serif;
+	font-size:24px;
+	}
+	#infoSection.department h5{
+		background:#00aceb;
+		}
+	#infoSection.prize h5{
+		background:#f41277;
+		}
+	#infoSection.user h5{
+		background:#f41277;
+		}
+#infoSection ul{
+	margin-bottom:20px;
+	}
+	#infoSection ul li{
+		margin-bottom:20px;
+		}
+	#infoSection ul a{
+		font-weight:bold;
+		}
+#infoSection p{
+	width:350px;
+	}
+/* ---------- Department --------- */
+#avgRating{
+	margin-bottom:20px;
+	padding:10px;
+	float:left;
+	border:1px solid #ccc;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+	font-family:Junction,Helvetica,Arial,sans-serif;
+	font-weight:bold;
+	letter-spacing:-1px;
+	line-height:16px;
+	overflow:hidden;
+	}
+	#avgRating span{
+		margin-right:10px;
+		float:left;
+		}
+/* ---------- Departments --------- */
+#departments h4{
+	margin-top:30px;
+	font-size:20px;
+	}
+#departments ul{
+	margin-bottom:30px;
+	font-size:14px;
+	}
+#departments li{
+	margin:10px 0;
+	}
+	#departments li span{
+		width:18px;
+		margin-right:30px;
+		display:block;
+		float:left;
+		color:#00aceb;
+		font-family:PermanentMarker,Helvetica,Arial,sans-serif;
+		font-size:18px;
+		line-height:0.8;
+		}
+/* ---------- User Profile ---------- */
+#profilePhoto{
+	margin-right:10px;
+	float:left;
+	}
+#profileSocial{
+	margin:30px 0 40px;
+	}
+#profileSocial li{
+	width:220px;
+	margin-top:10px;
+	padding:15px;
+	background-color:#f6fcfd;
+	background-repeat:no-repeat;
+	background-position:6px 6px;
+	border:1px solid #b6d8e3;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+	color:#00aceb;
+	font-weight:bold;
+	text-indent:36px;
+	}
+	#profileSocial .tw{
+		background-image:url('http://northeasternshuffle.com/images/twitter_32.png');
+		}
+	#profileSocial .fb{
+		background-image:url('http://northeasternshuffle.com/images/facebook_32.png');
+		}
+	#profileSocial .fbl{
+		background-image:none;
+		text-indent:0;
+		}
+	#profileSocial ul{
+		margin:10px 0 0 50px;
+		list-style:disc;
+		}
+		#profileSocial ul li{
+			width:auto;
+			padding:0;
+			background:none;
+			border:none;
+			color:#666;
+			font-size:11px;
+			font-weight:normal;
+			text-indent:0;
+			}
+#unlinkTwitter{
+	float:right;
+	color:#97c1cf;
+	}
+	#unlinkTwtitter:hover,
+	#unlinkTwtitter:focus{
+		color:#ff0000;
+		}
+/* ---------- Account Settings ---------- */
+#makeAnonymous{
+	margin-top:30px;
+	display:block;
+	color:#999;
+	}
+	#makeAnonymous:hover,
+	#makeAnonymous:focus{
+		color:#ff0000;
+		text-decoration:underline;
+		}
+#anonymous,
+#delete{
+	margin-top:10px;
+	padding:30px 20px;
+	display:none;
+	position:relative;
+	background:#ffd0d0;
+	}
+	#delete{
+		padding-bottom:10px;
+		}
+#anonymous .cancel,
+#delete .cancel{
+	padding-top:1px;
+	position:absolute;
+	top:3px;
+	right:5px;
+	background:url('http://northeasternshuffle.com/images/x.png') no-repeat 0 0;
+	color:#666;
+	text-indent:17px;
+	}
+#anonymous ul,
+#delete ul{
+	margin:25px;
+	list-style-type:disc;
+	}
+	#anonymous ul li,
+	#delete ul li{
+		margin:4px 0;
+		}
+#deleteAccount{
+	float:right;
+	color:#bbb;
+	font-size:10px;
+	}
+	#deleteAccount:hover,
+	#deleteAccount:focus{
+		color:#ff0000;
+		text-decoration:underline;
+		}
+#delete .warning{
+	color:#ff0000;
+	font-weight:bold;
+	}
+#delete .submit{
+	margin:20px 0;
+	}
+/* ---------- Search ---------- */
+#searchResults{
+	margin-bottom:0!important;
+	}

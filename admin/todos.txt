@@ -1,0 +1,55 @@
+*	Quick to implement
+**	Medium to implement
+***	Long to implement
+
+
+===== DATABASE =====
+*	Add column 'enabled' to nuusers
+
+===== FRONT END =====
+*	Welcome page with journey begins badge
+**	Photo uploading
+*	Test twitter linking and unlinking
+*	Setup new user if loggin in through facebook
+*	Badgewin for redeeming boloco
+*	Post error saves data
+**	Individual pages for posts (linked to by shorturls and timestamp and fb like button)
+**	Departments page sortable by name or grade
+*	Shrink badge tooltip
+***	Add badge wins to Recent Activity
+*	Page to list prizes similar to departments
+*	Fix fading announcement JS
+*	Reload report card per new post or every x minutes
+*	Login knows referring page
+
+
+===== BACK END =====
+*	If login fails/user just joined unset null user in session
+*	Stop blank (spaces or returns) posts from being submitted
+**	Delete account functionality
+**	Convert all load(), update(), insert() functions to use prepared statements
+**	Convert replies to ajax post/load
+*	Convert badges checks from if-else to switch statements
+*	Facebook birthday capture for already registered users
+*	Facebook check for changed profil picture on login
+*	Switch load id functions to load and instantiate in one call
+
+
+
+===== BACKEND =====
+Stop HTML from being posted in comments
+Recache profile pics every login
+Dynamic notification system
+Delete post function
+Shorturls in tweets
+Backend
+department categories
+
+===== FRONT END =====
+Polling
+Auto refresh activity
+Liking
+
+===== MISC =====
+Faculty / replies
+Mobile web app

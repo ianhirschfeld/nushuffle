@@ -1,0 +1,43 @@
+ErrorDocument 404 http://northeasternshuffle.com/404
+
+Options -Indexes
+
+RewriteEngine on
+RewriteBase /
+
+##### MISC PAGES #####
+RewriteRule ^(404|join|login|terms|verified|verify)/?$ index.php?page=$1
+RewriteRule ^(404|join|login|terms|verified|verify)/command/([^/]+)$ index.php?page=$1&command=$2
+RewriteRule ^(404|join|login|terms|verified|verify)/command/([^/]+)/([^/]+)/([^/]+)$ index.php?page=$1&command=$2&$3=$4
+RewriteRule ^(404|join|login|terms|verified|verify)/command/([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)$ index.php?page=$1&command=$2&$3=$4&$5=$6
+RewriteRule ^verify/([^/]+)$ handlers/verify.handler.php?vid=$1
+RewriteRule ^signup/?$ http://northeasternshuffle.com/join [R=301,L]
+
+##### MAIN PAGES #####
+RewriteRule ^(account|home|departments|search)/?$ index.php?page=$1
+RewriteRule ^(account|home|departments|search)/command/([^/]+)$ index.php?page=$1&command=$2
+RewriteRule ^(account|home|departments|search)/command/([^/]+)/([^/]+)/([^/]+)$ index.php?page=$1&command=$2&$3=$4
+RewriteRule ^(account|home|departments|search)/command/([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)$ index.php?page=$1&command=$2&$3=$4&$5=$6
+RewriteRule ^department/?$ http://northeasternshuffle.com/departments
+RewriteRule ^prize/?$ http://northeasternshuffle.com/home
+RewriteRule ^user/?$ http://northeasternshuffle.com/home
+RewriteRule ^(department|prize|user)/([0-9]+)/?$ index.php?page=$1&oid=$2
+RewriteRule ^(department|prize|user)/([0-9]+)/command/([^/]+)$ index.php?page=$1&oid=$2&command=$3
+RewriteRule ^(department|prize|user)/([0-9]+)/command/([^/]+)/([^/]+)/([^/]+)$ index.php?page=$1&oid=$2&command=$3&$4=$5
+RewriteRule ^(department|prize|user)/([0-9]+)/command/([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)$ index.php?page=$1&oid=$2&command=$3&$4=$5&$6=$7
+RewriteRule ^logout/?$ index.php?page=home&action=logout
+
+##### COMMANDS #####
+RewriteRule ^command/([^/]+)$ index.php?command=$1
+RewriteRule ^command/([^/]+)/([^/]+)/([^/]+)$ index.php?command=$1&$2=$3
+RewriteRule ^command/([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)$ index.php?command=$1&$2=$3&$4=$5
+
+
+
+
+
+
+
+
+#RewriteRule ^welcome$ welcome.php
+#RewriteRule ^qr$ qr.php

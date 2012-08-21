@@ -1,0 +1,19 @@
+- Changed all column id INT(20) to id BIGINT(20)
+- TABLE nuusers added column password
+- Added TABLE nuuserverify
+- UPDATE following tables to swap column user_fbid with user_id
+	nuratings
+	nuremedies
+	nureplies
+	nushuffles
+	nuuserachievements
+	nuuserprizes
+- DELETE from nushuffles where dept_ids = []
+- TABLE nuusers added column options
+- DELETE nuusers cols twitter, post defaults, anonymous
+- TABLE nuratings updated column score from -1,0,1 to 5 star rating
+- TABLE nuratings, nushuffles create shuffled for any previously labelled "good" rating
+- Fix the name for CCIS dept
+- TABLE nuusers added column faculty to users table
+- TABLE nuusers default values for fbid and birthday
+- TABLES nuratings convert type Good to Others
