@@ -1,10 +1,13 @@
 <?php
 /* ----- Database Settings ----- */
-$config['dbhost'] = 'localhost';
-$config['dbname'] = 'hippo_nushuff_shuffle';
-$config['dbuser'] = 'hippo_nushuff';
-$config['dbpass'] = 'QxPHR2jYI9E8';
-$config['database'] = new mysqli($config['dbhost'], $config['dbuser'], $config['dbpass'], $config['dbname']);
+$url=parse_url(getenv("mysql://b08245b6fa7b90:ac2cb9ed@us-cdbr-east.cleardb.com/heroku_8142c261b5aaae0?reconnect=true
+"));
+$server = $url["host"];
+$username = $url["user"];
+$password = $url["pass"];
+$db = substr($url["path"],1);
+
+$config['database'] = mysql_select_db($db);
 
 if($config['database']->connect_errno){ // Check successful connection to database
 	echo 'Error connecting to database';
